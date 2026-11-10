@@ -11,6 +11,9 @@
   --accent:#2457d6; --accent-ink:#ffffff; --accent-soft:#e6edfd;
   --mark:#ffe58a; --src:#f1f4f9; --warn:#8a5a00;
   --t-email:#1f6f54; --t-forum:#8a3d9e;
+  --shadow:0 1px 2px rgba(20,30,50,.06),0 4px 14px rgba(20,30,50,.06);
+  --shadow-hover:0 2px 4px rgba(20,30,50,.08),0 10px 24px rgba(36,87,214,.14);
+  --hero1:#2457d6; --hero2:#6a4bd8;
 }
 @media (prefers-color-scheme: dark){
   :root{
@@ -18,6 +21,9 @@
     --accent:#7aa2ff; --accent-ink:#0d1320; --accent-soft:#1f2b46;
     --mark:#6b5a12; --src:#212833; --warn:#e0b25a;
     --t-email:#5fd1a4; --t-forum:#d49be6;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 14px rgba(0,0,0,.25);
+    --shadow-hover:0 2px 4px rgba(0,0,0,.4),0 10px 24px rgba(0,0,0,.35);
+    --hero1:#1d3f9e; --hero2:#4a3499;
   }
 }
 *{box-sizing:border-box}
@@ -25,51 +31,69 @@ html{scroll-padding-top:70px}
 body{margin:0;background:var(--bg);color:var(--ink);
   font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
 .wrap{max-width:920px;margin:0 auto;padding:0 16px}
-header{padding:28px 0 12px}
-h1{font-size:1.65rem;line-height:1.2;margin:0 0 6px}
-header p{margin:0;color:var(--muted);max-width:68ch}
-.controls{padding:12px 0 10px;border-bottom:1px solid var(--line)}
+header{margin:20px 0 16px;padding:28px 24px;border-radius:18px;color:#fff;
+  background:linear-gradient(135deg,var(--hero1),var(--hero2));box-shadow:var(--shadow)}
+h1{font-size:1.9rem;line-height:1.15;margin:0 0 8px;letter-spacing:-.01em}
+header p{margin:0;color:rgba(255,255,255,.88);max-width:62ch}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.stat{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:3px 12px;font-size:.85rem}
+.controls{padding:0 0 4px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px 14px 12px;box-shadow:var(--shadow)}
 .search{display:flex;gap:8px;position:sticky;top:0;z-index:5;background:var(--bg);padding:8px 0}
-.search input{flex:1;min-width:0;font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink)}
+.search .box{position:relative;flex:1;min-width:0}
+.search .box svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:18px;height:18px;color:var(--muted);pointer-events:none}
+.kbd{position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:.72rem;color:var(--muted);border:1px solid var(--line);border-radius:5px;padding:0 6px;pointer-events:none}
+.search input{width:100%;font:inherit;padding:11px 40px 11px 38px;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--ink);box-shadow:var(--shadow)}
+.search input::-webkit-search-cancel-button{display:none}
 .search input:focus{outline:2px solid var(--accent);outline-offset:1px}
 button{font:inherit;color:inherit;cursor:pointer}
-.btn{border:1px solid var(--line);background:var(--card);border-radius:10px;padding:8px 12px}
+.btn{border:1px solid var(--line);background:var(--card);border-radius:12px;padding:8px 14px;box-shadow:var(--shadow);transition:opacity .15s,border-color .15s}
 .btn:hover{border-color:var(--accent)}
-.filters{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:10px}
+.btn:disabled{opacity:.45;cursor:default}
+.filters{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:8px}
 .group{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .group>span{font-size:.78rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-right:2px}
-.chip{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:3px 11px;font-size:.88rem}
-.chip:hover{border-color:var(--accent)}
-.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.chip{border:1px solid var(--line);background:var(--bg);border-radius:999px;padding:4px 12px;font-size:.88rem;transition:background .15s,border-color .15s,transform .1s}
+.chip:hover{border-color:var(--accent);background:var(--accent-soft)}
+.chip:active{transform:scale(.96)}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:600}
+.chip:focus-visible,summary:focus-visible,.btn:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 select{font:inherit;font-size:.88rem;padding:3px 8px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink)}
-.bar{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-top:10px;font-size:.9rem;color:var(--muted);align-items:center}
+.bar{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-top:12px;padding-top:10px;border-top:1px solid var(--line);font-size:.9rem;color:var(--muted);align-items:center}
+#count{font-weight:600;color:var(--ink)}
 .bar .acts{display:flex;gap:6px}
 .bar button{border:0;background:none;color:var(--accent);padding:2px 4px;text-decoration:underline}
 main{padding:8px 0 40px}
-.period{margin-top:26px}
-.period h2{font-size:1.15rem;margin:0 0 2px}
-.period .links{font-size:.84rem;color:var(--muted);margin:0 0 8px}
+.period{margin-top:30px}
+.period h2{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px;font-size:1.5rem;line-height:1.2;margin:0 0 2px;letter-spacing:-.01em}
+.season{font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;padding:2px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+.months{font-weight:400;color:var(--muted);font-size:.9rem}
+.period .links{font-size:.84rem;color:var(--muted);margin:0 0 10px}
 .period .links a{color:var(--accent)}
-details.task{background:var(--card);border:1px solid var(--line);border-radius:12px;margin:8px 0;overflow:hidden}
-details.task[open]{border-color:var(--accent)}
-summary{list-style:none;cursor:pointer;padding:12px 14px;display:block}
+details.task{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--t-email);border-radius:14px;margin:10px 0;overflow:hidden;box-shadow:var(--shadow);transition:box-shadow .2s,transform .2s}
+details.task.forum{border-left-color:var(--t-forum)}
+details.task:hover{box-shadow:var(--shadow-hover);transform:translateY(-1px)}
+details.task[open]{box-shadow:var(--shadow-hover)}
+details.task[open] summary{background:var(--accent-soft)}
+summary{list-style:none;cursor:pointer;padding:14px 16px;display:block;transition:background .15s}
 summary::-webkit-details-marker{display:none}
 summary:hover{background:var(--accent-soft)}
 .top{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:4px;font-size:.8rem}
 .badge{padding:1px 8px;border-radius:6px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
 .badge.kind-email{color:var(--t-email);border-color:var(--t-email)}
 .badge.kind-forum{color:var(--t-forum);border-color:var(--t-forum)}
-.title{font-weight:600;font-size:1.02rem;line-height:1.35}
+.title{font-weight:650;font-size:1.08rem;line-height:1.3;padding-right:24px}
 .sub{color:var(--muted);font-size:.92rem;margin-top:2px}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
 .tag{font-size:.78rem;padding:1px 8px;border-radius:999px;background:var(--accent-soft);color:var(--ink)}
 .tag.style{background:transparent;border:1px dashed var(--muted);color:var(--muted)}
-.caret{float:right;color:var(--muted);transition:transform .15s}
+.caret{float:right;color:var(--accent);font-size:1.1rem;transition:transform .2s}
 details[open] .caret{transform:rotate(90deg)}
-.body{padding:2px 16px 16px;border-top:1px solid var(--line)}
+.body{padding:2px 20px 20px;border-top:1px solid var(--line);animation:fade .2s ease}
+@keyframes fade{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
 .body p,.body .ln{margin:.45em 0}
 .intro{margin-top:14px!important}
-.source{background:var(--src);border-left:4px solid var(--accent);border-radius:6px;padding:8px 14px;margin:12px 0}
+.source{background:var(--src);border-left:4px solid var(--accent);border-radius:8px;padding:10px 16px;margin:14px 0}
 .source .blk{margin:.7em 0}
 .source .ln{margin:.2em 0}
 .instr{margin-top:14px}
@@ -78,15 +102,22 @@ details[open] .caret{transform:rotate(90deg)}
 .begin{margin-top:10px;color:var(--muted)}
 .salut{display:inline-block;margin-left:6px;padding:2px 10px;border:1px solid var(--line);border-radius:6px;background:var(--src);color:var(--ink);font-family:ui-monospace,Menlo,Consolas,monospace}
 mark{background:var(--mark);color:inherit;border-radius:3px;padding:0 1px}
-.missing{margin:8px 0;padding:10px 14px;border:1px dashed var(--line);border-radius:12px;color:var(--muted);font-size:.92rem}
+.missing{margin:8px 0;padding:12px 16px;border:1px dashed var(--line);border-radius:14px;color:var(--muted);font-size:.92rem}
 .missing a{color:var(--accent)}
-.empty{margin:40px 0;text-align:center;color:var(--muted)}
+.empty{margin:30px 0;padding:30px 16px;text-align:center;color:var(--muted);background:var(--card);border:1px dashed var(--line);border-radius:14px}
+.empty button{margin-top:10px}
+.totop{position:fixed;right:16px;bottom:16px;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--card);box-shadow:var(--shadow-hover);font-size:1.2rem;opacity:0;pointer-events:none;transition:opacity .2s}
+.totop.show{opacity:1;pointer-events:auto}
 footer{border-top:1px solid var(--line);padding:20px 0 40px;color:var(--muted);font-size:.88rem}
 footer p{margin:.5em 0;max-width:78ch}
 .note{color:var(--warn)}
 @media (max-width:560px){
-  h1{font-size:1.35rem}
+  h1{font-size:1.45rem}
+  header{padding:22px 18px;border-radius:14px}
+  .kbd{display:none}
+  .body{padding:2px 14px 16px}
 }
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
@@ -94,21 +125,25 @@ footer p{margin:.5em 0;max-width:78ch}
   <header>
     <h1>Advanced English Writing: Past Essay Topics</h1>
     <p>Essay tasks from past advanced-level English written exams. Search by keyword or filter by task type, style and topic, then open a task to read it in full.</p>
+    <div class="stats" id="stats"></div>
   </header>
 
   <div class="controls">
     <div class="search">
-      <input id="q" type="search" placeholder="Search: topic, name, word, e.g. fireworks, laptop, formal…" aria-label="Search the tasks" autocomplete="off">
+      <div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" placeholder="Search: topic, name, word, e.g. fireworks, laptop, formal…" aria-label="Search the tasks" autocomplete="off"><span class="kbd" aria-hidden="true">/</span></div>
       <button class="btn" id="clear" type="button">Clear</button>
     </div>
+    <div class="panel">
     <div class="filters" id="filters"></div>
     <div class="bar">
       <span id="count" aria-live="polite"></span>
       <span class="acts"><button type="button" id="openAll">Expand all</button><button type="button" id="closeAll">Collapse all</button></span>
     </div>
+    </div>
   </div>
 
   <main id="list"></main>
+  <button class="totop" id="totop" type="button" aria-label="Back to top">↑</button>
 
   <footer>
     <p id="missingNote"></p>
@@ -241,7 +276,7 @@ function renderTask(o, tm, forceOpen){
   const sub = t.kind === 'Email' ? `Email to ${t.recipient}` : t.subject;
   const tags = [`<span class="tag style">${t.style}</span>`, ...t.topics.map(x=>`<span class="tag">${esc(x)}</span>`)].join('');
   const salut = sp.salut.map(l=>esc(l)).join(' ');
-  return `<details class="task" id="${id}" ${open?'open':''}>
+  return `<details class="task ${t.kind==='Email'?'':'forum'}" id="${id}" ${open?'open':''}>
     <summary>
       <span class="caret" aria-hidden="true">▸</span>
       <div class="top"><span class="badge">Task ${t.n}</span><span class="badge ${kindCls}">${t.kind}</span>${t.words?`<span class="badge">${t.words} words</span>`:''}</div>
@@ -261,7 +296,7 @@ function periodHead(p){
   const links = [];
   if(p.source) links.push(`<a href="${esc(p.source)}" target="_blank" rel="noopener">Official paper (PDF)</a>`);
   if(p.page) links.push(`<a href="${esc(p.page)}" target="_blank" rel="noopener">Exam day page</a>`);
-  return `<h2>${p.year} · ${SEASON_LABEL[p.season]} <span style="font-weight:400;color:var(--muted);font-size:.9rem">(${esc(p.months)})</span></h2>
+  return `<h2>${p.year} <span class="season">${SEASON_LABEL[p.season]}</span> <span class="months">${esc(p.months)}</span></h2>
           <p class="links">${links.join(' · ')}</p>`;
 }
 
@@ -271,7 +306,7 @@ function render(){
   for(const p of DATA){
     if(!p.available){
       if(!active){
-        html += `<section class="period"><h2>${p.year} · ${SEASON_LABEL[p.season]} <span style="font-weight:400;color:var(--muted);font-size:.9rem">(${esc(p.months)})</span></h2>
+        html += `<section class="period"><h2>${p.year} <span class="season">${SEASON_LABEL[p.season]}</span> <span class="months">${esc(p.months)}</span></h2>
           <div class="missing">Not in the supplied PDF. <a href="${esc(p.page)}" target="_blank" rel="noopener">Exam day page on oktatas.hu</a></div></section>`;
       }
       continue;
@@ -281,8 +316,9 @@ function render(){
     shown += rows.length;
     html += `<section class="period">${periodHead(p)}${rows.map(o=>renderTask(o, tm, tm.length>0)).join('')}</section>`;
   }
-  if(!shown) html = '<div class="empty">No task matches. Try fewer filters or a different word.</div>' + html;
+  if(!shown) html = '<div class="empty">No task matches your search.<br>Try fewer filters or a different word.<br><button class="btn" type="button" onclick="resetAll()">Clear everything</button></div>' + html;
   list.innerHTML = html;
+  $('#clear').disabled = !active;
   $('#count').textContent = `${shown} of ${TASKS.length} tasks` + (active ? ' match' : ' (10 exam periods)');
 }
 
@@ -293,10 +329,23 @@ $('#list').addEventListener('toggle', e => {
 }, true);
 let timer;
 $('#q').addEventListener('input', e => { clearTimeout(timer); timer = setTimeout(()=>{ state.q = e.target.value; render(); }, 120); });
-$('#clear').addEventListener('click', () => {
+function resetAll(){
   state.q=''; state.year=''; Object.values(state.sel).forEach(s=>s.clear()); $('#q').value='';
   buildFilters(); render();
+}
+$('#clear').addEventListener('click', resetAll);
+document.addEventListener('keydown', e => {
+  const typing = /^(INPUT|SELECT|TEXTAREA)$/.test(document.activeElement.tagName);
+  if(e.key === '/' && !typing){ e.preventDefault(); $('#q').focus(); $('#q').select(); }
+  else if(e.key === 'Escape' && document.activeElement === $('#q')){ if($('#q').value){ resetAll(); } else { $('#q').blur(); } }
 });
+const topBtn = $('#totop');
+window.addEventListener('scroll', () => topBtn.classList.toggle('show', window.scrollY > 600), {passive:true});
+topBtn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+(function(){
+  const n = DATA.filter(p=>p.available).length;
+  $('#stats').innerHTML = `<span class="stat">${TASKS.length} tasks</span><span class="stat">${n} exam periods</span><span class="stat">Task 1: email · Task 2: forum comment</span>`;
+})();
 $('#openAll').addEventListener('click', () => { document.querySelectorAll('details.task').forEach(d=>{d.open=true;}); });
 $('#closeAll').addEventListener('click', () => { document.querySelectorAll('details.task').forEach(d=>{d.open=false;}); });
 
