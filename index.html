@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emelt English Essay Topics 2017–2026</title>
+<meta name="description" content="Advanced-level (emelt szint) English written exam: all essay tasks from the official papers, searchable and filterable by type, style and topic.">
+<style>
+:root{
+  --bg:#f6f7f9; --card:#ffffff; --ink:#1b1f24; --muted:#5b6470; --line:#dde1e6;
+  --accent:#2457d6; --accent-ink:#ffffff; --accent-soft:#e6edfd;
+  --mark:#ffe58a; --src:#f1f4f9; --warn:#8a5a00;
+  --t-email:#1f6f54; --t-forum:#8a3d9e;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#12151a; --card:#1a1f26; --ink:#e8ebef; --muted:#9aa4b1; --line:#2c333d;
+    --accent:#7aa2ff; --accent-ink:#0d1320; --accent-soft:#1f2b46;
+    --mark:#6b5a12; --src:#212833; --warn:#e0b25a;
+    --t-email:#5fd1a4; --t-forum:#d49be6;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+.wrap{max-width:920px;margin:0 auto;padding:0 16px}
+header{padding:28px 0 12px}
+h1{font-size:1.65rem;line-height:1.2;margin:0 0 6px}
+header p{margin:0;color:var(--muted);max-width:68ch}
+.controls{padding:12px 0 10px;border-bottom:1px solid var(--line)}
+.search{display:flex;gap:8px;position:sticky;top:0;z-index:5;background:var(--bg);padding:8px 0}
+.search input{flex:1;min-width:0;font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink)}
+.search input:focus{outline:2px solid var(--accent);outline-offset:1px}
+button{font:inherit;color:inherit;cursor:pointer}
+.btn{border:1px solid var(--line);background:var(--card);border-radius:10px;padding:8px 12px}
+.btn:hover{border-color:var(--accent)}
+.filters{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:10px}
+.group{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.group>span{font-size:.78rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-right:2px}
+.chip{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:3px 11px;font-size:.88rem}
+.chip:hover{border-color:var(--accent)}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+select{font:inherit;font-size:.88rem;padding:3px 8px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink)}
+.bar{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-top:10px;font-size:.9rem;color:var(--muted);align-items:center}
+.bar .acts{display:flex;gap:6px}
+.bar button{border:0;background:none;color:var(--accent);padding:2px 4px;text-decoration:underline}
+main{padding:8px 0 40px}
+.period{margin-top:26px}
+.period h2{font-size:1.15rem;margin:0 0 2px}
+.period .links{font-size:.84rem;color:var(--muted);margin:0 0 8px}
+.period .links a{color:var(--accent)}
+details.task{background:var(--card);border:1px solid var(--line);border-radius:12px;margin:8px 0;overflow:hidden}
+details.task[open]{border-color:var(--accent)}
+summary{list-style:none;cursor:pointer;padding:12px 14px;display:block}
+summary::-webkit-details-marker{display:none}
+summary:hover{background:var(--accent-soft)}
+.top{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:4px;font-size:.8rem}
+.badge{padding:1px 8px;border-radius:6px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+.badge.kind-email{color:var(--t-email);border-color:var(--t-email)}
+.badge.kind-forum{color:var(--t-forum);border-color:var(--t-forum)}
+.title{font-weight:600;font-size:1.02rem;line-height:1.35}
+.sub{color:var(--muted);font-size:.92rem;margin-top:2px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.tag{font-size:.78rem;padding:1px 8px;border-radius:999px;background:var(--accent-soft);color:var(--ink)}
+.tag.style{background:transparent;border:1px dashed var(--muted);color:var(--muted)}
+.caret{float:right;color:var(--muted);transition:transform .15s}
+details[open] .caret{transform:rotate(90deg)}
+.body{padding:2px 16px 16px;border-top:1px solid var(--line)}
+.body p,.body .ln{margin:.45em 0}
+.intro{margin-top:14px!important}
+.source{background:var(--src);border-left:4px solid var(--accent);border-radius:6px;padding:8px 14px;margin:12px 0}
+.source .blk{margin:.7em 0}
+.source .ln{margin:.2em 0}
+.instr{margin-top:14px}
+.instr .blk{margin:.5em 0}
+.bul{padding-left:1.1em;text-indent:-1.1em;margin:.25em 0}
+.begin{margin-top:10px;color:var(--muted)}
+.salut{display:inline-block;margin-left:6px;padding:2px 10px;border:1px solid var(--line);border-radius:6px;background:var(--src);color:var(--ink);font-family:ui-monospace,Menlo,Consolas,monospace}
+mark{background:var(--mark);color:inherit;border-radius:3px;padding:0 1px}
+.missing{margin:8px 0;padding:10px 14px;border:1px dashed var(--line);border-radius:12px;color:var(--muted);font-size:.92rem}
+.missing a{color:var(--accent)}
+.empty{margin:40px 0;text-align:center;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:20px 0 40px;color:var(--muted);font-size:.88rem}
+footer p{margin:.5em 0;max-width:78ch}
+.note{color:var(--warn)}
+@media (max-width:560px){
+  h1{font-size:1.35rem}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Emelt English Writing: Past Essay Topics</h1>
+    <p>Advanced-level (emelt szint) English written exam, 2017–2026. Every task below is the exact wording from the official papers (source: the PDF supplied by the site owner). Only 10 of the 20 exam periods are in that PDF.</p>
+  </header>
+
+  <div class="controls">
+    <div class="search">
+      <input id="q" type="search" placeholder="Search: topic, name, word, e.g. fireworks, laptop, formal…" aria-label="Search the tasks" autocomplete="off">
+      <button class="btn" id="clear" type="button">Clear</button>
+    </div>
+    <div class="filters" id="filters"></div>
+    <div class="bar">
+      <span id="count" aria-live="polite"></span>
+      <span class="acts"><button type="button" id="openAll">Expand all</button><button type="button" id="closeAll">Collapse all</button></span>
+    </div>
+  </div>
+
+  <main id="list"></main>
+
+  <footer>
+    <p id="missingNote"></p>
+    <p class="note">What is original and what is not: the text inside each opened task (the situation, the advert or forum post, the instructions, the word limits and the opening line) is copied word for word from the official papers via the supplied PDF. The task type, style (formal / semi-formal / informal), topic tags, short titles and one-line subjects are this site's own labels to make browsing easier; they are not part of the exam papers. Style is judged from the opening line the paper prescribes: "Dear …" is formal; "Hi …" or "Hello …" to a company or organisation is semi-formal; "Hi …" to a friend and all forum replies are informal. Pictures on the original adverts are not shown.</p>
+    <p>No "letter to the editor" task appears in the papers included here, so there is no such category.</p>
+  </footer>
+</div>
+
+<script>
+const DATA = [{"year": 2026, "season": "Spring", "months": "May-June", "available": true, "source": "https://www.oktatas.hu/bin/content/dload/erettsegi/feladatok_2026tavasz_emelt/e_angol_26maj_fl.pdf", "page": "https://www.oktatas.hu/kozneveles/erettsegi/feladatsorok/emelt_szint_2026tavasz/emelt_4nap", "tasks": [{"n": 1, "kind": "Email", "style": "Formal", "words": "120-150", "recipient": "Ms Josífková", "title": "Creative Writing – Prague European Summer School", "subject": null, "topics": ["Education & courses"], "intro": ["You are a university student and have found the following advertisement on the website of your university:"], "source": [["Creative Writing", "Prague European Summer School", "As children, it is through stories that we begin to learn how the world works. As adults, we often need a story to design a strong presentation, create an effective social media post, apply for a job, or write an academic essay.", "Course aim: to improve writing skills", "• to enable you to sell your idea, concept, or product through a variety of narrative tools and methods;", "• to enhance your English vocabulary, composition and writing style.", "Target group", "Young professionals and university students with at least an intermediate (B2) level of English."], ["Interested? And you don’t mind receiving homework before the course starts? Contact our co-ordinator, Andrea Josífková, by email:", "info@europeansummerschool.com"]], "instruction": [["Write an email of 120-150 words to Ms Josífková in which you", "• introduce yourself, and say why you think improving your writing skills will be advantageous for your studies/future job,", "• ask about the details of the homework you will receive before the course starts,", "• ask about the date(s) and duration of the course, and the course fee."], ["Begin your email like this:"], ["Dear Ms Josífková,"]]}, {"n": 2, "kind": "Forum comment", "style": "Informal", "words": "200-250", "recipient": null, "title": "Post by Emily (class group chat)", "subject": "Mum posted photos of the teenager on social media without asking", "topics": ["Family & relationships", "Social media & tech"], "intro": ["You’ve found the following post in your group chat with your class."], "source": [["Hey guys, the most irritating thing has happened, and it’s driving me crazy."], ["My mum had her birthday and we had a family get-together at the weekend, where everyone took a lot of pictures, of course. I didn’t think much of it, goofing around with my cousins as usual. To my horror, my mum posted a lot of these photos on social media the next day. We all look ridiculous, especially me. I was wearing no make-up, and I never realized the dress I was wearing looked so hideous!"], ["I confronted my mum and told her to delete the pictures immediately, because she had no right to post these without my consent, but she says she is my mother, I’m a minor, it was her birthday, and she can share photos of her own party if she likes. We had a huge fight, I even begged her to delete the photos, but she won’t budge, and we are still not speaking."], ["What shall I do? I’ll hack her account if I have to, but I can’t have my photos appear on all her social media with me looking like that. It was ok when I was little, I didn’t have a say in it then, but shouldn’t she take my feelings into account now that I’m 17???"], ["Emily"]], "instruction": [["Write a comment of 200-250 words to Emily’s post, in which you tell her"], ["• whether anything similar has ever happened to you or anyone you know,", "• whether you think parents should post pictures of their children on social media,", "• at what age you think a person should be able to control what others post about them,", "• what you think she should do in this situation."], ["Begin your comment like this:"], ["Emily,"]]}]}, {"year": 2026, "season": "Autumn", "months": "October-November", "available": true, "source": "https://www.oktatas.hu/bin/content/dload/erettsegi/feladatok_2026osz_emelt/e_angol_26okt_fl.pdf", "page": "https://www.oktatas.hu/kozneveles/erettsegi/feladatsorok/emelt_szint_2026osz/emelt_4nap", "tasks": [{"n": 1, "kind": "Email", "style": "Formal", "words": "120-150", "recipient": "Jake McReary", "title": "Share Your Opinion on TV, Streaming & Podcasts", "subject": null, "topics": ["Work & careers", "Social media & tech"], "intro": ["You are looking for a student job and have found the following advertisement on studentjob.co.uk."], "source": [["Share Your Opinion on TV, Streaming & Podcasts Do you love binge-watching series, listening to podcasts, or gaming? Turn your screen time into money!"], ["What does the job involve?", "By joining our panel, you aren’t just sharing thoughts, you are shaping the future of video and audio content in the UK. Your feedback gives content creators valuable insights into what audiences truly want.", "What will you do?", "Share your views: Complete surveys on your phone or computer. Give your opinion on TV shows, podcasts, streaming services, and even social media or gaming.", "What we offer:", "Total Flexibility: A 100% remote role; you can work from your phone or computer, whenever it suits your study schedule.", "Requirements:", "• No minimum education or experience needed.", "• Tech-savvy: You need access to a smartphone or computer with an internet connection."], ["Ready to make your voice heard? Don't just watch the future of entertainment – shape it! Apply at studentjob@YourVoice.com by writing to Jake McReary."]], "instruction": [["Write an email of 120-150 words to Jake McReary in which you", "• say why you think you would be suitable for the job,", "• write about what area you would be interested in sharing your views on and why,", "• ask about the payment and the required language level."], ["Begin your email like this:"], ["Dear Mr McReary,"]]}, {"n": 2, "kind": "Forum comment", "style": "Informal", "words": "200-250", "recipient": null, "title": "Post by Norman on 7 Cups", "subject": "Girlfriend's family doesn't drink and he is asked not to at her sister's wedding", "topics": ["Family & relationships", "Lifestyle & beliefs"], "intro": ["You have found the following post on the internet forum 7 Cups:"], "source": [["As a child, I saw that drinking alcohol was something adults sometimes did, and as I got older (I’m 19 now), I understood the appeal of my mom and dad’s occasional gin and tonic or glass of wine."], ["My girlfriend Rosie and I started dating when we were both in our last year at school. It was clear from the very beginning that although we had many things in common, enjoying a drink would never be one of them. She simply “didn’t like the taste of alcohol”, in any form. It didn’t take me long to realise that it wasn’t just her but her whole family, as when I was invited for lunch in their home, I found that there were only soft drinks and tap water on the table. When I brought up the topic later, she said it was simply a lifestyle choice that they all shared."], ["Luckily, she didn’t mind if I ordered a beer with my food in a restaurant and I didn’t mind drinking alone either, it has become a natural state of being. Until her sister’s wedding… It turned out that I would accompany Rosie, who would be one of the bridesmaids. She told me about the whole ceremony, adding that as I would appear at the dinner party as part of their family, she hoped that, in spite of cocktails and champagne being served for other guests, I would be able to refrain from drinking alcohol in front of her parents and close relatives. It would be very disappointing, even upsetting for her parents to see, as she never told them about this ‘habit of mine’. A habit??? As if I was an alcoholic who regularly ended up blind drunk at social events?"], ["I simply don’t know what to do now. I still love Rosie but I can’t help feeling bad about what she said. What do you think?"], ["Norman"]], "instruction": [["Write a comment of 200-250 words to Norman’s post in which you tell him"], ["• how much you think different family norms and habits matter in a relationship,", "• if you have ever heard of similar differences causing problems,", "• if you think Norman is right to feel offended,", "• what he should do now."], ["Start your comment like this:"], ["Norman:"]]}]}, {"year": 2025, "season": "Spring", "months": "May-June", "available": false, "source": null, "page": "https://www.oktatas.hu/kozneveles/erettsegi/feladatsorok/emelt_szint_2025tavasz/emelt_4nap", "tasks": []}, {"year": 2025, "season": "Autumn", "months": "October-November", "available": true, "source": "https://www.oktatas.hu/bin/content/dload/erettsegi/feladatok_2025osz_emelt/e_angol_25okt_fl.pdf", "page": "https://www.oktatas.hu/kozneveles/erettsegi/feladatsorok/emelt_szint_2025osz/emelt_5nap", "tasks": [{"n": 1, "kind": "Email", "style": "Formal", "words": "120-150", "recipient": "Dr Brady", "title": "Irish Lives in War and Revolution: Exploring Ireland's History 1912-1923 – Trinity College Dublin", "subject": null, "topics": ["Education & courses"], "intro": ["You are an exchange student in Dublin, Ireland. You have decided to do a course on Irish history. Here is the description of the course you have found:"], "source": [["Trinity College Dublin"], ["Irish Lives in War and Revolution: Exploring Ireland's History 1912-1923"], ["Explore the lives of men, women and children living through war and revolution and social changes that made modern Ireland."], ["This five‐week course looks beyond the familiar names and the famous faces ‐ the traditional histories can tell us about them. Instead, it explores how the events that shaped the nature of modern Ireland ‐ the Great War, the Easter Rising, the Irish war of independence and civil war ‐ were experienced by the people who lived through them or in spite of them."], ["Through videos, assignments and discussions, through innovative approaches, this course introduces you to the history of Ireland in one of its most tumultuous periods."], ["To register email Dr Ciaran Brady c.brady@trinity.com"]], "instruction": [["Write an email of 120-150 words to Dr Brady in which you", "• introduce yourself and explain why you would like to do the course,", "• ask about the frequency of the classes and access to a coursebook or other teaching material,", "• say what other courses (at least one) connected to Ireland you would be interested in."], ["Begin your email like this:"], ["Dear Dr Brady,"]]}, {"n": 2, "kind": "Forum comment", "style": "Informal", "words": "200-250", "recipient": null, "title": "Post by Kathy 18 on Jobs and Careers: \"Schools let us down\"", "subject": "Is college worth it? Schools do not teach how to get rich", "topics": ["Education & courses", "Work & careers"], "intro": ["You have found the following post on an internet forum called Jobs and Careers:"], "source": [["Kathy 18"], ["Schools let us down"], ["I want to share with you my doubts about whether going to college is the best option for any of us no matter how bright we are. Provided that we want to be successful in life, a winner, if you like."], ["My sister has been through college and I know how tough it is. Courses, tests and assignments! But is it worth all the time and effort? The truth is that a lot of college graduates still struggle after graduation. They can't find jobs and have lots of debt. They realise (way too late) that schools and colleges only train you to be in the poor groups: Employee and Small Business. You will never get rich here! Why? First, the harder you work, the more money the government is going to take from you through tax. Second, your income is low. What schools and colleges don’t teach you is how to get into in the rich groups: Big Business and Investor. Most people in the world get stuck in the poor groups and they don’t know how to step forward."], ["As I see it the reason for this lies in the fact that schools and colleges don’t equip you with winning survival techniques, practical knowledge and the skill to upgrade yourself. I wonder if you agree with me and if you have any ideas how schools and colleges should change their ways to provide us with the skills we really need in life to be successful."]], "instruction": [["Write a comment of 200-250 words to Kathy’s post in which you tell her", "• how far you agree with her opinion about going to college,", "• if your idea of success is the same as hers,", "• whether you feel you have been sufficiently prepared for real life at school,", "• whether/how schools should change what they teach and how they do it to provide more useful skills."], ["Begin your comment like this:"], ["Kathy:"]]}]}, {"year": 2024, "season": "Spring", "months": "May-June", "available": true, "source": "https://www.oktatas.hu/bin/content/dload/erettsegi/feladatok_2024tavasz_emelt/e_angol_24maj_fl.pdf", "page": "https://www.oktatas.hu/kozneveles/erettsegi/feladatsorok/emelt_szint_2024tavasz/emelt_5nap", "tasks": [{"n": 1, "kind": "Email", "style": "Informal", "words": "120-150", "recipient": "your friend", "title": "Student clubs: Climate Society, Dance Society, Harry Potter Society", "subject": null, "topics": ["Hobbies, sports & clubs", "Education & courses"], "intro": ["You have just started university and are thinking of joining a student club with your friend David. He sent you the following three descriptions of clubs he is already a member of."], "source": [["“The Climate Society connects like-minded individuals, inspires and educates the next generation of climate leaders, take action towards ambitious emission reductions, and provides platforms for academic, artistic, and social engagement with climate change.”"], ["“Our aim at the University Dance Society is to offer a variety of dance classes. We welcome people of all levels of experience. For this term, the classes we aim to offer are Ballet, Contemporary Dance, Hip-Hop, Dance Fitness, Yoga, and Body Toning & Stretching.”"], ["“The Harry Potter Society is for people who are still waiting for their Hogwarts letters. We hold film screenings, arts and crafts nights, quizzes, fanfic sessions and much more. For when you're all Pottered-out, we have regular socials, including a weekly pub lunch. We're a friendly bunch, so why not come along and join us?”"]], "instruction": [["Write an email of 120-150 words to your friend in which you"], ["• thank him for the information and say what you think of student clubs in general,", "• write about which of the three clubs you would most like to join and why,", "• ask about membership fees and the frequency of meetings."], ["Begin your email like this:"], ["Hi David,"]]}, {"n": 2, "kind": "Forum comment", "style": "Informal", "words": "200-250", "recipient": null, "title": "Post by Aneka, LA, USA on Trapped", "subject": "Anti-fireworks activist invited to a wedding with fireworks", "topics": ["Society & environment", "Family & relationships"], "intro": ["You have found the following post on the internet forum Trapped:"], "source": [["As a child I used to enjoy fireworks on New Year’s Eve or 4th July or even ones set off at parties in the neighbourhood. However, since we adopted a rescue labrador, Holly, I have come to dread all these fireworks seasons as she is petrified with fear by all sorts of loud and sudden noises, especially fireworks. To see her in this state of extreme stress for hours each time makes me really worry that one day she might get a heart attack."], ["This experience made me start reading about the traumatizing effects fireworks have not only on pets but on wild animals including birds, too, and also on people with various conditions like autism. Eventually I decided to join an anti-fireworks action group in my hometown. So far our main activities have been signing petitions and spreading information on social media. These are small steps to raise awareness but at least I feel I’ve done something."], ["Can you imagine my embarrassment when I received an invitation to my dearest cousin’s wedding ceremony including the reception afterwards, where, according to his email, the main attraction will be the ’sensational’ fireworks organised by my uncle, and guests are encouraged to bring their own fireworks to add to the fun. I really don’t like the idea of missing this family event; however, I also feel that taking part in a fireworks session would mean betraying the goal I’ve set for myself."], ["What do you think?"], ["Aneka, LA, USA"]], "instruction": [["Write a comment of 200-250 words to Aneka in which you give your opinion about"], ["• fireworks as a form of celebration,", "• Aneka’s argument against them,", "• joining an action group for a cause you find important,", "• what she should do in this situation."], ["Begin like this:"], ["Aneka:"]]}]}, {"year": 2024, "season": "Autumn", "months": "October-November", "available": false, "source": null, "page": "https://www.oktatas.hu/kozneveles/erettsegi/feladatsorok/emelt_szint_2024osz/emelt_5nap", "tasks": []}, {"year": 2023, "season": "Spring", "months": "May-June", "available": true, "source": "https://www.oktatas.hu/bin/content/dload/erettsegi/feladatok_2023tavasz_emelt/e_angol_23maj_fl.pdf", "page": "https://www.oktatas.hu/kozneveles/erettsegi/feladatsorok/emelt_szint_2023tavasz/emelt_5nap", "tasks": [{"n": 1, "kind": "Email", "style": "Semi-formal", "words": "120-150", "recipient": "Carl", "title": "Ice skating courses for adults in Pittsburgh", "subject": null, "topics": ["Hobbies, sports & clubs", "Travel & leisure"], "intro": ["You are a visiting student at the University of Pittsburgh, US, and when one of your friends posts a couple of photos of himself skating and having a great time, you decide to have a go yourself. You have found the following advertisement:"], "source": [["Ice skating courses for adults in Pittsburgh"], ["Whether you’re reigniting a childhood passion or just beginning your skating journey, Learn to Skate Pittsburgh® wants everyone to enjoy the magic of skating. The Adult curriculum is for anyone who wishes to improve their skills; it is designed for both beginning and experienced adult skaters, and you can join at the rink of your choice.", "Participation in the program will help promote physical fitness and improve balance and coordination while teaching proper skating techniques. This is an exciting program for people who look at skating as an enjoyable part of a fit and healthy lifestyle.", "Send us an email and tell us about your level and what course you have in mind. You can join a group or opt for individual coaching. We will find a tailored course for you near you wherever you live in Pittsburgh! You needn’t worry about the weather, as apart from outdoor rinks we can offer climatised indoor rinks open all year round as well.", "Contact Carl: carl.hagen@learntoskatepittsburgh.us"]], "instruction": [["Write an email of 120-150 words to Carl in which you", "• tell him about the level of your skating skills,", "• say what kind of course you would like to take part in and how frequently you can go,", "• ask about the length of sessions, the necessary equipment, and fees."], ["Begin your email like this:"], ["Hello Carl,"]]}, {"n": 2, "kind": "Forum comment", "style": "Informal", "words": "200-250", "recipient": null, "title": "Post by Ida on Do you believe in the paranormal?", "subject": "Visiting a fortune teller before the A-levels", "topics": ["Lifestyle & beliefs"], "intro": ["You have found the following post on the internet forum Do you believe in the paranormal?"], "source": [["My parents originally came from Poland, and I travelled a lot in my childhood. I have been living and studying in England since I was 12 and now I’m 17, preparing for my A-levels. My aunt Elvira has always been worried about my future since I attended so many different schools in different countries when I was younger. So, she decided to take me to this fortune teller whose speciality is diagnosing diseases just by holding your hand, as well as predicting your future (at least key events). The guy lives in a tiny village and has never travelled outside of it, nor does he have access to the internet. And, according to my aunt, unlike others who claim to be able to foresee the future, he’s a REAL clairvoyant and very good at his job."], ["With the exams coming up you become superstitious looking for ’signs’ even if you are pretty sceptical otherwise, so I thought why not? It sounded fun, a good way of both distracting myself and experiencing something new maybe."], ["However, as the day is approaching, I’m beginning to have doubts about whether it is really a good idea. If he predicts all sorts of positive things which never come true, well, I’ll be able to live with that. But what if he predicts that I’ll fail my exams or something even worse? Someone I love falling ill? Dying even? Will I be able to ignore it and continue my life without thinking about it all the time?"], ["What should I do now? Shall I tell my aunt about my fears and make her cancel the appointment? What would you do?"], ["Ida"]], "instruction": [["Write a post of 200-250 words replying to Ida in which you tell her"], ["• what you think of paranormal abilities in general,", "• whether you know anyone who has had their future told,", "• if you think Ida’s aunt’s suggestion is a good idea,", "• what you think Ida should do."], ["Begin your post like this:"], ["Ida:"]]}]}, {"year": 2023, "season": "Autumn", "months": "October-November", "available": true, "source": "https://www.oktatas.hu/bin/content/dload/erettsegi/feladatok_2023osz_emelt/e_angol_23okt_fl.pdf", "page": "https://www.oktatas.hu/kozneveles/erettsegi/feladatsorok/emelt_szint_2023osz/emelt_4nap", "tasks": [{"n": 1, "kind": "Email", "style": "Semi-formal", "words": "120-150", "recipient": "Adam", "title": "Online classes at The Jamie Oliver Cookery School", "subject": null, "topics": ["Hobbies, sports & clubs", "Education & courses"], "intro": ["You have come across the following advertisement on the Internet:"], "source": [["Online classes at The Jamie Oliver Cookery School"], ["Hey lovely people! We at The Jamie Oliver Cookery School have moved our cooking classes online! Discover a specific cuisine and pick up useful tips from our amazing chefs – just from the comfort of your own kitchen.", "Book onto one of our live, interactive, two-hour digital classes, and we’ll send you a recipe card with a shopping list, so you can be ready to go when you log into the session via Zoom.", "During the class, our helpful English-speaking chefs will walk you through the recipe steps and cook along with you, answering any questions you may have. You’ll be sharing the session with a handful of other food lovers, so prepare yourself for a great experience.", "ITALIAN FAVOURITES: Create your very own Italian feast and master the foundations of this wonderful cuisine in this two-hour class.", "THE ULTIMATE BURGER: Recreate burger perfection at home, complete with mustard, melty cheese, homemade sauce, and super-speedy pickled onions.", "BREAD BAKING: Fill your house with the smell of fresh bread as our chefs guide you through the basics of bread baking."], ["So what are you waiting for? Choose the session that makes your mouth water and book now! Write to Adam at adam@jamiescookeryschool.com."]], "instruction": [["Write an email of 120-150 words to Adam in which you", "• introduce yourself briefly and write about your previous cooking experience, if any,", "• choose a class and say why you’re interested in it,", "• ask about the price of the class and the equipment needed."], ["Begin your email like this:"], ["Hi Adam,"]]}, {"n": 2, "kind": "Forum comment", "style": "Informal", "words": "200-250", "recipient": null, "title": "Post by Emma U.K. on Take the Challenge", "subject": "The 100-day challenge: wearing the same dress for 100 days", "topics": ["Lifestyle & beliefs"], "intro": ["You found the following post on the internet forum Take the Challenge:"], "source": [["Emma U.K."], ["Have you heard about the 100-day challenge devised by the US brand Wool&? They produce simple, sustainably sourced merino wool dresses called Rowena, Ellie and other common names. The basic idea is that women who wear the same dress for 100 days and document it with daily pictures get a voucher for a new one."], ["I got the idea from my friend Eby in Oregon, who is on day 58 with her grey Fiona dress (I only saw photos of her wearing it on Instagram). She had decided to take part in the challenge because she completely agreed with the brand’s mission statement – “live simply, consume carefully, do good” – and encouraged me to sign up too."], ["I quite like the idea of living a simpler life in general; the pandemic showed us that it was possible to survive without a lot of things we had thought of as essential. You also have to be creative to be able to do more with less, so it could even be fun. (Or, as guys manage perfectly with a pair of jeans and a T-shirt for ever and ever, no special challenge there, haha?)"], ["Anyway, I’m more for it than not but can’t make up my mind; I’d appreciate your opinion. Do you think I should give it a try? Would you? Or your girlfriend?"]], "instruction": [["Write a comment of 200-250 words in which you tell her"], ["• whether you agree with the mission statement of the brand,", "• whether you think it’s a real challenge worth trying for anyone,", "• what problems -if any- you think wearing the same dress for 100 days might cause,", "• whether she should take part in the challenge and why/ why not."], ["Begin your email like this:"], ["Emma:"]]}]}, {"year": 2022, "season": "Spring", "months": "May-June", "available": true, "source": "https://www.oktatas.hu/bin/content/dload/erettsegi/feladatok_2022tavasz_emelt/e_angol_22maj_fl.pdf", "page": "https://www.oktatas.hu/kozneveles/erettsegi/feladatsorok/emelt_szint_2022tavasz/emelt_4nap", "tasks": [{"n": 1, "kind": "Email", "style": "Formal", "words": "120-150", "recipient": "Erin", "title": "Adult Puppetry Courses and Workshops", "subject": null, "topics": ["Hobbies, sports & clubs", "Education & courses"], "intro": ["Tired of studying, you would like to do something different, entertaining and creative in your free time and you have found the following advertisement:"], "source": [["Adult Puppetry Courses and Workshops"], ["Online classes, courses and workshops in puppetry performance, puppet making and related arts for adults available for individuals or groups of friends, or you can join one of our group courses."], ["Our range of online puppetry and related crafts courses can be taken from anywhere in the world. They are fun, flexible and offer a full puppetry workshop experience from the comfort of your own location.", "You will find both puppet making and puppetry performance workshops available through our online learning and training opportunities. We offer you the chance to join affordable, professional and friendly small group adult classes, or you are welcome to enquire about a tailored private course if you wish to develop your creative practice in puppetry.", "We provide classes online for all levels of puppeteers from complete beginners to experienced professionals.", "The course costs $190 (US Dollars) or £140 (GBP) per person. Discounts available for students. Please do get in touch to let us know what you would like to learn and book your place on a course!", "Contact Erin: erin.cohen@puppetworld.com"]], "instruction": [["Write an email of 120-150 words to Erin in which you", "• specify which aspect of puppetry and which type of course you are interested in and why,", "• ask about the details of the course you have chosen (number, length and frequency of sessions; course material and equipment),", "• say if and why you would like to get a discount."], ["Begin your email like this:"], ["Dear Erin,"]]}, {"n": 2, "kind": "Forum comment", "style": "Informal", "words": "200-250", "recipient": null, "title": "Post by Shane 18 on Job Issues", "subject": "His sister is offered a well-paid job on a reality TV show", "topics": ["Work & careers", "Society & environment"], "intro": ["You found the following post on the internet forum Job Issues:"], "source": [["My older sister, Sandie (25) studied to be an art designer and has been working as an art or production designer for independent, low budget films (very low budget indeed – she practically works for peanuts). Her job involves designing film sets, costumes, sometimes also posters, etc., which she enjoys a lot because of the opportunity for personal growth due to the variety of work, and because there’s always a respectable cause for these films: political, social or environmental.", "Now she has been invited to join the art crew in a show which would feature several (ex-) tv reality show stars competing in stupid games among extreme circumstances (to win several thousands of dollars). The project would take about eight months and she would be paid more than ten times the salary she would normally earn. Someone she used to work with and who appreciates her work recommended her and now she has a week to make up her mind before either signing the contract or turning it down.", "Our family is in turmoil now. Some of us agree with Sandie, who is hesitating, saying that taking part in such rubbish, giving her NAME to it, as she put it, would destroy her reputation and would go against everything that she has professionally done and achieved so far. Others, including me, however, think that this is a wonderful opportunity which she shouldn’t miss.", "I can’t see the moral issue there, can you? I’d appreciate your opinion.", "Shane 18"]], "instruction": [["Write a comment of 200-250 words to Shane’s post in which you tell him"], ["• what the advantages of accepting the job could be,", "• what the advantages of rejecting it could be,", "• whether you think the problem has a moral aspect,", "• what you would do if you were Sandie."], ["Begin your comment like this:"], ["Shane:"]]}]}, {"year": 2022, "season": "Autumn", "months": "October-November", "available": true, "source": "https://www.oktatas.hu/bin/content/dload/erettsegi/feladatok_2022osz_emelt/e_angol_22okt_fl.pdf", "page": "https://www.oktatas.hu/kozneveles/erettsegi/feladatsorok/emelt_szint_2022osz/emelt_5nap", "tasks": [{"n": 1, "kind": "Email", "style": "Formal", "words": "120-150", "recipient": "Adam", "title": "Badminton club – University of Edinburgh Sports Union", "subject": null, "topics": ["Hobbies, sports & clubs"], "intro": ["You are continuing your studies at the University of Edinburgh, which offers several sports activities for its students. You have come across the following on the website of the Sports Union."], "source": [["This year is a better time than ever to become a part of one of the biggest and best clubs in Edinburgh!", "Having grown massively in recent years, we offer badminton for all abilities.", "For those just looking to come along and have a laugh, we have weekly training sessions where you can learn the basics from our experienced coaches while enjoying the company of the brilliant members of our club. You are also welcome to join us on our Friday night bowling parties or pub quizzes.", "On a more competitive note, our five mixed teams compete in the Scottish leagues with two teams in the top two divisions. We also have a large number of teams competing in the local Edinburgh league.", "So whether you have never held a racquet in your life or you fancy yourself as a bit of a hotshot, come along to our club and we guarantee you won’t want to leave.", "CONTACT Adam at badminton@ed.ac.uk."]], "instruction": [["Write an email of 120-150 words to Adam in which you", "• introduce yourself and say whether you have done any sports before,", "• say how good you are at badminton and why you want to join the club,", "• ask about the time and place of the training sessions, and about the Friday night activities."], ["Begin your email like this:", "Dear Adam,"]]}, {"n": 2, "kind": "Forum comment", "style": "Informal", "words": "200-250", "recipient": null, "title": "Post by Josh on Slings and Arrows", "subject": "His mother keeps turning up at his student flat", "topics": ["Family & relationships"], "intro": ["You have found the following post on the internet forum Slings and Arrows:"], "source": [["Josh:", "I'm a 19-year-old guy and study in Aberdeen. My parents live outside Pitlochry and they rent a room for me next to the university so that I needn’t commute every day. We regularly speak on the phone; however, my mum sometimes feels the need to see me so she just jumps into her car and turns up on my doorstep unexpectedly. If I’m out, she leaves home-made food in plastic boxes in the fridge, sometimes does a quick clean or puts my clothes into the washing machine in the laundry room and I find her there chatting with one of my flatmates I hardly know while waiting for the drier to finish.", "You may say she’s fantastic, that I’m very lucky and should be happy to have such a caring mum… BUT! Can you imagine what it feels like when, after a party, I choose to sleep in and miss a morning class or two and wake up at 10 a.m. to find my mum sitting reproachfully next to my bed, telling me in a really annoying way that I seem to have forgotten the sacrifice she and dad have made to make university possible for me. Whatever I say we’ll end up arguing, with her in tears and me furious and shouting.", "Believe me, I really appreciate everything they are doing to support me but I also think that living on my own should mean the beginning of my independent life and they should accept this, let me off the leash and stop controlling me. I don’t mind if they want to know my timetable or have a key to my place as long as they respect my privacy and start treating me as an adult.", "What do you think?"]], "instruction": [["Write a reply of 200-250 words to Josh in which you tell him what you think", "• of his mother’s attitude,", "• of his feelings,", "• it means to be an adult,", "• he should do to change this situation."], ["Begin like this:", "Josh:"]]}]}, {"year": 2021, "season": "Spring", "months": "May-June", "available": true, "source": "https://www.oktatas.hu/bin/content/dload/erettsegi/feladatok_2021tavasz_emelt/e_angol_21maj_fl.pdf", "page": "https://www.oktatas.hu/kozneveles/erettsegi/feladatsorok/emelt_szint_2021tavasz/emelt_4nap", "tasks": [{"n": 1, "kind": "Email", "style": "Formal", "words": "120-150", "recipient": "Sandra", "title": "PREPLY English Online Tutor", "subject": null, "topics": ["Work & careers"], "intro": ["You are looking for a flexible on-line job to finance your studies and you have found the following advertisement:"], "source": [["PREPLY English Online Tutor", "Are you an energetic, patient, responsible", "and cheerful person? Are you good at", "English? Would you like to help primary", "and secondary school students from all", "over the world to improve their English", "skills, catch up with schoolwork and", "prepare for exams?", "PREPLY is an online platform where tutors", "and students are connected.", "PREPLY is looking for dedicated, enthusiastic, and passionate individuals to coach, tutor and help students achieve their language learning goals.", "With PREPLY, you can have a flexible (self-picked) schedule, self-chosen lesson price, as well as training materials, guidance, and opportunities to help students from all over the world and make a difference in their lives.", "If you are searching for a job opportunity that allows you to work from anywhere, at any time, search no more: all this is provided by the PREPLY platform.", "Native and non-native applicants welcome.", "In order to register with PREPLY email Sandra: sandra.wu@preply.org"]], "instruction": [["Write an email of 120-150 words to Sandra in which you", "• introduce yourself and tell her about your level of English,", "• say why you want this teaching job and what age group and/or level you would like to deal with,", "• say which days of the week you are available and how many lessons you can do."], ["Begin your email like this:", "Dear Sandra,"]]}, {"n": 2, "kind": "Forum comment", "style": "Informal", "words": "200-250", "recipient": null, "title": "Post by Sam 17 (almost) on Generation Gap", "subject": "He wants an expensive gamer laptop for his 17th birthday", "topics": ["Family & relationships", "Social media & tech"], "intro": ["You have read the following post on the internet forum Generation Gap:"], "source": [["So, the thing is this. Ever since I was 11 or so, I’ve had a big passion for computer games. At that time, we were relatively poor since my parents had divorced and my mother had problems with money. It had been like this for a long time until earlier this year when my mother got married for the second time. My stepfather is a rather rich dude who just lets her use his credit card and never asks questions about her spending.", "So, you know, as my 17th bday is in a couple of weeks and she has the money, I told her I'd really like a gamer laptop as a gift. She has been promising for more than a year to me that as soon as she was able economically, she would buy me a really good laptop. However, when I showed her in the catalogue which model I had in mind she came up with the lamest excuses ever, such as a €1000 gift for a teen is too much and stuff like that.", "I don't want to appear ungrateful for what I have but I've been \"dreaming\" of this for like 6 years, and now she has the money, so I can’t see the reason why she should refuse my request just like that.", "What do you think I could do to make her change her mind? I’m even considering turning to my stepfather directly as we are on very good terms. Do you think it’s a good idea?"], ["Sam 17 (almost)"]], "instruction": [["Write a comment of 200-250 words to Sam in which you give your opinion about"], ["• Sam’s feelings and expectations,", "• his mother’s attitude,", "• expensive presents for teens in general,", "• what Sam should do."], ["Begin your comment like this:", "Sam:"]]}]}, {"year": 2021, "season": "Autumn", "months": "October-November", "available": true, "source": "https://www.oktatas.hu/bin/content/dload/erettsegi/feladatok_2021osz_emelt/e_angol_21okt_fl.pdf", "page": "https://www.oktatas.hu/kozneveles/erettsegi/feladatsorok/emelt_szint_2021osz/emelt_5nap", "tasks": [{"n": 1, "kind": "Email", "style": "Informal", "words": "120-150", "recipient": "Colin", "title": "A day in London: V&A Museum, Borough Market or Soho", "subject": null, "topics": ["Travel & leisure"], "intro": ["In the summer holidays you are travelling in rural England but on your way home you will spend a day in London. Your English friend Colin offered to spend the day with you and also sent you the descriptions of three programmes to choose from:"], "source": [["See a world-class exhibition at the Victoria & Albert Museum What is it? A cathedral to culture, the V&A is a world-class museum championing the very best of decorative art and design.", "Why go? The V&A houses one of the greatest collections of art, design, fashion and textiles on the planet. The permanent exhibits in this museum are fascinating, free to visit and include a mini pet cemetery.", "Eat your way around Borough Market", "What is it? One of the city’s largest and oldest food markets. Popular with both tourists and locals, offering all sorts of gastronomic delights and mouth-watering free samples."], ["Why go? This mega market near London Bridge has a history that goes back to the thirteenth century, and it’s livelier than ever: Borough Market is packed with artisan traders and it’s also home to some of the best restaurants and bars in the city."], ["People-watch and party in Soho"], ["What is it? A West End neighbourhood with a fascinating history, which now teems with a mix of party- goers, foodies, tourists, theatre fans and media people in addition to a few surviving colourful local characters."], ["Why go? Soho is home to some of London’s best theatres, restaurants, bars, clubs and shops. The maze of streets, linked by narrow Dickensian alleyways, are always busy and full of life."]], "instruction": [["Write an email of 120-150 words to Colin, in which you", "• tell him which programme you would like to choose,", "• give your reasons,", "• suggest another place/activity that could also be interesting to see/do in London."], ["Begin your email like this:"], ["Hi Colin,"]]}, {"n": 2, "kind": "Forum comment", "style": "Informal", "words": "200-250", "recipient": null, "title": "Post by Claire on The Student Room", "subject": "Mum takes her phone away at night and checks her messages", "topics": ["Family & relationships", "Social media & tech"], "intro": ["You have read the following post on an internet forum called The Student Room:"], "source": [["My mom takes my phone away at night and it makes me really mad. Not only do I use it to wake up in the morning because I hate the sound of a beeping alarm clock, I sometimes need to text people and ask them homework questions after my mom has gone to bed. I’m not one of those people who have late night texting conversations, I love my sleep. And, if I want to go on Facebook or whatever before I go to bed, why shouldn't I?! I'm 16. I don't need her controlling my life in that way. She just doesn't seem to get that I'm not a child anymore. In less than two years I'll be off to uni, so I may be wrong but I'm pretty sure I'm old enough to have my phone at night."], ["She also wants to check my messages and control what apps I download. I mean, seriously? It’s none of her business who I chat with and what pages I visit.", "Yesterday she said that if I don’t want to show her my phone, I obviously have something to hide, so she went through all my messages. When I flipped out, she says she’s just a parent worried about her kid, and that I shouldn’t make such a big deal out of it. She doesn’t seem to get how infuriating and humiliating this is for me. Advice anyone?"], ["Claire"]], "instruction": [["Write a comment of 200-250 words to Claire’s post in which you tell her"], ["• whether you think parents have the right to control their children’s screen time,", "• whether you think parents should have a say in what apps their children use,", "• your personal experiences and ideas about a teenager’s privacy issues,", "• what you think she should do."], ["Begin your comment like this:"], ["Claire,"]]}]}, {"year": 2020, "season": "Spring", "months": "May-June", "available": false, "source": null, "page": "https://www.oktatas.hu/kozneveles/erettsegi/feladatsorok/emelt_szint_2020tavasz/emelt_4nap", "tasks": []}, {"year": 2020, "season": "Autumn", "months": "October-November", "available": false, "source": null, "page": "https://www.oktatas.hu/kozneveles/erettsegi/feladatsorok/emelt_szint_2020osz/emelt_5nap", "tasks": []}, {"year": 2019, "season": "Spring", "months": "May-June", "available": false, "source": null, "page": "https://www.oktatas.hu/kozneveles/erettsegi/feladatsorok/emelt_szint_2019tavasz/emelt_5nap", "tasks": []}, {"year": 2019, "season": "Autumn", "months": "October-November", "available": false, "source": null, "page": "https://www.oktatas.hu/kozneveles/erettsegi/feladatsorok/emelt_szint_2019osz/emelt_5nap", "tasks": []}, {"year": 2018, "season": "Spring", "months": "May-June", "available": false, "source": null, "page": "https://www.oktatas.hu/kozneveles/erettsegi/feladatsorok/emelt_szint_2018tavasz/emelt_5nap", "tasks": []}, {"year": 2018, "season": "Autumn", "months": "October-November", "available": false, "source": null, "page": "https://www.oktatas.hu/kozneveles/erettsegi/feladatsorok/emelt_szint_2018osz/emelt_4nap", "tasks": []}, {"year": 2017, "season": "Spring", "months": "May-June", "available": false, "source": null, "page": "https://www.oktatas.hu/kozneveles/erettsegi/feladatsorok/emelt_szint_2017tavasz/emelt_5nap", "tasks": []}, {"year": 2017, "season": "Autumn", "months": "October-November", "available": false, "source": null, "page": "https://www.oktatas.hu/kozneveles/erettsegi/feladatsorok/emelt_szint_2017osz/emelt_5nap", "tasks": []}];
+
+const SEASON_LABEL = {Spring:'Spring', Autumn:'Autumn'};
+const $ = (s, r=document) => r.querySelector(s);
+
+/* ---------- helpers ---------- */
+const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+// char-by-char fold keeps string length identical, so match indexes map 1:1
+const foldChar = c => { const f = c.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase(); return f.length===1 ? f : c; };
+const fold = s => Array.from(s).map(foldChar).join('');
+const taskId = (p,t) => `t-${p.year}-${p.season.toLowerCase()}-${t.n}`;
+
+function highlight(text, terms){
+  if(!terms.length) return esc(text);
+  const f = fold(text); const marks = [];
+  for(const term of terms){
+    let i = 0;
+    while((i = f.indexOf(term, i)) !== -1){ marks.push([i, i+term.length]); i += term.length; }
+  }
+  if(!marks.length) return esc(text);
+  marks.sort((a,b)=>a[0]-b[0]);
+  const merged = [marks[0].slice()];
+  for(const m of marks.slice(1)){ const l = merged[merged.length-1]; if(m[0] <= l[1]) l[1] = Math.max(l[1], m[1]); else merged.push(m.slice()); }
+  let out = '', pos = 0;
+  for(const [a,b] of merged){ out += esc(text.slice(pos,a)) + '<mark>' + esc(text.slice(a,b)) + '</mark>'; pos = b; }
+  return out + esc(text.slice(pos));
+}
+
+/* ---------- flatten tasks, build search haystack ---------- */
+function splitInstruction(t){
+  const lines = t.instruction.flat();
+  const bi = lines.findIndex(l => /^(Begin|Start) .*like this:$/.test(l));
+  if(bi === -1) return {instr: t.instruction, begin: null, salut: []};
+  // keep block structure for instruction part
+  let count = 0, blocks = [];
+  for(const b of t.instruction){
+    const take = [];
+    for(const l of b){ if(count < bi) take.push(l); count++; }
+    if(take.length) blocks.push(take);
+  }
+  return {instr: blocks, begin: lines[bi], salut: lines.slice(bi+1)};
+}
+const TASKS = [];
+for(const p of DATA){
+  for(const t of p.tasks){
+    const sp = splitInstruction(t);
+    const o = {p, t, id: taskId(p,t), sp};
+    const wordsLabel = t.words ? `${t.words} words` : '';
+    o.hay = fold([
+      p.year, p.season, p.months, 'task '+t.n, t.kind, t.style, t.topics.join(' '),
+      t.title, t.subject||'', t.recipient||'', wordsLabel,
+      t.intro.join(' '), t.source.flat().join(' '), t.instruction.flat().join(' ')
+    ].join(' \n '));
+    TASKS.push(o);
+  }
+}
+
+/* ---------- filter state ---------- */
+const GROUPS = [
+  {key:'kind',   label:'Task',   values:['Email','Forum comment'], get:o=>[o.t.kind]},
+  {key:'style',  label:'Style',  values:['Formal','Semi-formal','Informal'], get:o=>[o.t.style]},
+  {key:'topic',  label:'Topic',  values:[...new Set(TASKS.flatMap(o=>o.t.topics))].sort(), get:o=>o.t.topics},
+  {key:'season', label:'Season', values:['Spring','Autumn'], get:o=>[o.p.season]},
+];
+const YEARS = [...new Set(DATA.filter(p=>p.available).map(p=>p.year))].sort((a,b)=>b-a);
+const state = {q:'', year:'', sel:{kind:new Set(), style:new Set(), topic:new Set(), season:new Set()}};
+const openIds = new Set();
+
+function buildFilters(){
+  const box = $('#filters'); box.innerHTML = '';
+  for(const g of GROUPS){
+    const d = document.createElement('div'); d.className = 'group';
+    d.innerHTML = `<span>${g.label}</span>`;
+    for(const v of g.values){
+      const b = document.createElement('button');
+      b.type = 'button'; b.className = 'chip'; b.textContent = v;
+      b.setAttribute('aria-pressed', state.sel[g.key].has(v));
+      b.addEventListener('click', () => {
+        const s = state.sel[g.key]; s.has(v) ? s.delete(v) : s.add(v);
+        b.setAttribute('aria-pressed', s.has(v)); render();
+      });
+      d.appendChild(b);
+    }
+    box.appendChild(d);
+  }
+  const yd = document.createElement('div'); yd.className = 'group';
+  yd.innerHTML = '<span>Year</span>';
+  const sel = document.createElement('select'); sel.setAttribute('aria-label','Year');
+  sel.innerHTML = '<option value="">All years</option>' + YEARS.map(y=>`<option>${y}</option>`).join('');
+  sel.addEventListener('change', () => { state.year = sel.value; render(); });
+  yd.appendChild(sel); box.appendChild(yd);
+}
+
+function terms(){ return fold(state.q.trim()).split(/\s+/).filter(Boolean); }
+function filtersActive(){
+  return !!(terms().length || state.year || Object.values(state.sel).some(s=>s.size));
+}
+function matches(o, tm){
+  for(const g of GROUPS){
+    const s = state.sel[g.key];
+    if(s.size && !g.get(o).some(v=>s.has(v))) return false;
+  }
+  if(state.year && String(o.p.year) !== state.year) return false;
+  for(const w of tm) if(!o.hay.includes(w)) return false;
+  return true;
+}
+
+/* ---------- rendering ---------- */
+function renderLines(lines, tm){
+  return lines.map(l => l.startsWith('•')
+    ? `<div class="bul">${highlight(l, tm)}</div>`
+    : `<div class="ln">${highlight(l, tm)}</div>`).join('');
+}
+function renderBlocks(blocks, tm){
+  return blocks.map(b => `<div class="blk">${renderLines(b, tm)}</div>`).join('');
+}
+function renderTask(o, tm, forceOpen){
+  const {p, t, id, sp} = o;
+  const open = forceOpen || openIds.has(id);
+  const kindCls = t.kind === 'Email' ? 'kind-email' : 'kind-forum';
+  const sub = t.kind === 'Email' ? `Email to ${t.recipient}` : t.subject;
+  const tags = [`<span class="tag style">${t.style}</span>`, ...t.topics.map(x=>`<span class="tag">${esc(x)}</span>`)].join('');
+  const salut = sp.salut.map(l=>esc(l)).join(' ');
+  return `<details class="task" id="${id}" ${open?'open':''}>
+    <summary>
+      <span class="caret" aria-hidden="true">▸</span>
+      <div class="top"><span class="badge">Task ${t.n}</span><span class="badge ${kindCls}">${t.kind}</span>${t.words?`<span class="badge">${t.words} words</span>`:''}</div>
+      <div class="title">${highlight(t.title, tm)}</div>
+      <div class="sub">${highlight(sub, tm)}</div>
+      <div class="tags">${tags}</div>
+    </summary>
+    <div class="body">
+      <p class="intro">${highlight(t.intro.join(' '), tm)}</p>
+      <div class="source">${renderBlocks(t.source, tm)}</div>
+      <div class="instr">${renderBlocks(sp.instr, tm)}</div>
+      ${sp.begin ? `<div class="begin">${highlight(sp.begin, tm)}<span class="salut">${highlight(sp.salut.join(' '), tm)}</span></div>` : ''}
+    </div>
+  </details>`;
+}
+function periodHead(p){
+  const links = [];
+  if(p.source) links.push(`<a href="${esc(p.source)}" target="_blank" rel="noopener">Official paper (PDF)</a>`);
+  if(p.page) links.push(`<a href="${esc(p.page)}" target="_blank" rel="noopener">Exam day page</a>`);
+  return `<h2>${p.year} · ${SEASON_LABEL[p.season]} <span style="font-weight:400;color:var(--muted);font-size:.9rem">(${esc(p.months)})</span></h2>
+          <p class="links">${links.join(' · ')}</p>`;
+}
+
+function render(){
+  const tm = terms(); const active = filtersActive();
+  const list = $('#list'); let html = ''; let shown = 0;
+  for(const p of DATA){
+    if(!p.available){
+      if(!active){
+        html += `<section class="period"><h2>${p.year} · ${SEASON_LABEL[p.season]} <span style="font-weight:400;color:var(--muted);font-size:.9rem">(${esc(p.months)})</span></h2>
+          <div class="missing">Not in the supplied PDF. <a href="${esc(p.page)}" target="_blank" rel="noopener">Exam day page on oktatas.hu</a></div></section>`;
+      }
+      continue;
+    }
+    const rows = TASKS.filter(o => o.p === p && matches(o, tm));
+    if(!rows.length) continue;
+    shown += rows.length;
+    html += `<section class="period">${periodHead(p)}${rows.map(o=>renderTask(o, tm, tm.length>0)).join('')}</section>`;
+  }
+  if(!shown) html = '<div class="empty">No task matches. Try fewer filters or a different word.</div>' + html;
+  list.innerHTML = html;
+  $('#count').textContent = `${shown} of ${TASKS.length} tasks` + (active ? ' match' : ' (10 exam periods)');
+}
+
+/* ---------- events ---------- */
+$('#list').addEventListener('toggle', e => {
+  const d = e.target; if(!d.classList || !d.classList.contains('task')) return;
+  d.open ? openIds.add(d.id) : openIds.delete(d.id);
+}, true);
+let timer;
+$('#q').addEventListener('input', e => { clearTimeout(timer); timer = setTimeout(()=>{ state.q = e.target.value; render(); }, 120); });
+$('#clear').addEventListener('click', () => {
+  state.q=''; state.year=''; Object.values(state.sel).forEach(s=>s.clear()); $('#q').value='';
+  buildFilters(); render();
+});
+$('#openAll').addEventListener('click', () => { document.querySelectorAll('details.task').forEach(d=>{d.open=true;}); });
+$('#closeAll').addEventListener('click', () => { document.querySelectorAll('details.task').forEach(d=>{d.open=false;}); });
+
+/* ---------- footer note ---------- */
+(function(){
+  const miss = DATA.filter(p=>!p.available).map(p=>`${p.year} ${p.season}`);
+  $('#missingNote').textContent = `Not in the supplied PDF (${miss.length}): ${miss.join(', ')}. The papers for these periods exist on the official oktatas.hu archive, but they were not part of the source PDF, so they are not shown here.`;
+})();
+
+buildFilters(); render();
+if(location.hash){ const id = location.hash.slice(1); const el = document.getElementById(id); if(el){ el.open = true; openIds.add(id); el.scrollIntoView(); } }
+</script>
+</body>
+</html>
